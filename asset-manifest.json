@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mukesh045/UpdateZone/static/css/main.df4e0706.css",
+    "main.js": "/Mukesh045/UpdateZone/static/js/main.9a0d449c.js",
+    "static/js/535.fc224338.chunk.js": "/Mukesh045/UpdateZone/static/js/535.fc224338.chunk.js",
+    "index.html": "/Mukesh045/UpdateZone/index.html",
+    "main.df4e0706.css.map": "/Mukesh045/UpdateZone/static/css/main.df4e0706.css.map",
+    "main.9a0d449c.js.map": "/Mukesh045/UpdateZone/static/js/main.9a0d449c.js.map",
+    "535.fc224338.chunk.js.map": "/Mukesh045/UpdateZone/static/js/535.fc224338.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df4e0706.css",
+    "static/js/main.9a0d449c.js"
+  ]
+}
