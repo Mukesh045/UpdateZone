@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Mukesh045.github.io/UpdateZone",
   "name": "newsapp",
   "version": "0.1.0",
   "private": true,
@@ -9,10 +10,15 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-scripts": "5.0.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-router-dom": "^7.7.1",
+    "react-scripts": "^0.0.0",
+    "react-top-loading-bar": "^3.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

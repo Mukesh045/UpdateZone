@@ -1,10 +1,163 @@
+/* Global Styles for Dark Orange Theme */
+body {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Overrides */
+.navbar {
+  background-color: #331a00 !important;
+  border-bottom: 2px solid #ff8c00 !important;
+}
+
+.navbar-brand {
+  color: #ff8c00 !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+.nav-link {
+  color: #ff8c00 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 140, 0, 0.2) !important;
+  border-radius: 5px;
+}
+
+/* Headings (e.g., News category title) */
+h2 {
+  color: #ff8c00 !important;
+  text-align: center;
+  margin: 35px 0 !important;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Containers and Layout */
+.container {
+  background-color: #1a1a1a !important;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.row {
+  background-color: #1a1a1a !important;
+  margin: 0;
+}
+
+.col-md-4 {
+  background-color: #1a1a1a !important;
+  padding: 10px;
+}
+
+/* Card Styles for NewsItems */
+.card {
+  background-color: #2a2a2a !important;
+  border: 2px solid #ff8c00 !important;
+  color: #f0f0f0 !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100% !important;
+  max-width: 18rem;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(255, 140, 0, 0.3) !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ff8c00;
+}
+
+.card-title {
+  color: #ff8c00 !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #f0f0f0 !important;
+  line-height: 1.4;
+}
+
+.text-muted {
+  color: #aaa !important;
+}
+
+/* Button Styles (Read More) */
+.btn-dark {
+  background-color: #ff8c00 !important;
+  border-color: #ff8c00 !important;
+  color: #ffffff !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #e67e00 !important;
+  border-color: #e67e00 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Spinner (assuming it uses a class or inline; override if needed) */
+.spinner-border {
+  color: #ff8c00 !important;
+}
+
+/* Links */
+a {
+  color: #ff8c00 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e67e00 !important;
+  text-decoration: underline;
+}
+
+/* App Default Styles (Retained and Adapted) */
 .App {
   text-align: center;
+  background-color: #1a1a1a;
+}
+
+.App-header {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f0f0f0;
+}
+
+.App-link {
+  color: #ff8c00;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  filter: hue-rotate(30deg); /* Slight orange tint if used */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +166,145 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100% !important;
+    margin: 0 auto 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+/* About Section - Accordion Styles for Dark Orange Theme */
+.accordion {
+  background-color: #1a1a1a !important;
+  margin: 20px 0;
+}
+
+.accordion-item {
+  background-color: #2a2a2a !important;
+  border: 1px solid #ff8c00 !important;
+  border-radius: 8px !important;
+  margin-bottom: 10px;
+  color: #f0f0f0 !important;
+}
+
+.accordion-header h2 {
+  background-color: #1a1a1a !important;
+}
+
+.accordion-button {
+  background-color: #ff8c00 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-color: #ff8c00 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e67e00 !important;
+  color: #ffffff !important;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+  background-color: #e67e00 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.25) !important;
+}
+
+.accordion-collapse {
+  background-color: #1a1a1a !important;
+  border-color: #ff8c00 !important;
+}
+
+.accordion-body {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  padding: 20px !important;
+  line-height: 1.6;
+}
+
+.accordion-body h3,
+.accordion-body h5 {
+  color: #ff8c00 !important;
+  margin: 10px 0 !important;
+  padding: 10px !important;
+  font-weight: bold;
+}
+
+.accordion-body strong {
+  color: #ff8c00 !important;
+}
+
+.accordion-body div {
+  color: #f0f0f0 !important;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-left: 3px solid #ff8c00;
+  border-radius: 5px;
+}
+
+/* Responsive for Accordion */
+@media (max-width: 768px) {
+  .accordion-body {
+    padding: 15px !important;
+  }
+
+  .accordion-body h3,
+  .accordion-body h5 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Custom Spinner for Dark Orange Theme */
+.custom-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #2a2a2a;
+  border-top: 4px solid #ff8c00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive for Spinner */
+@media (max-width: 576px) {
+  .custom-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
   }
 }
