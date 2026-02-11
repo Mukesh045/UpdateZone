@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Handle GitHub Pages SPA routing
+if (window.location.pathname === '/UpdateZone/') {
+  const path = window.location.search.slice(1).split('&')[0].replace(/~and~/g, '&');
+  if (path) {
+    window.history.replaceState(null, null, '/UpdateZone/' + path);
+  }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
