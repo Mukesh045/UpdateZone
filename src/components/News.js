@@ -20,9 +20,15 @@ const News = (props) => {
     const fetchInitialNews = async () => {
         setProgress(10);
         setLoading(true);
-        const apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=1&pageSize=${pageSize}`;
+        const apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=f07f9ca22d534927920e0d81a75c3157&page=1&pageSize=${pageSize}`;
         try {
-            let data = await fetch(apiUrl);
+            let data = await fetch(apiUrl, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
             let parsedData = await data.json();
             if (parsedData.articles && parsedData.articles.length > 0) {
                 setArticles(parsedData.articles);
@@ -45,10 +51,16 @@ const News = (props) => {
 
   const fetchMoreData = useCallback(async () => {
     const nextPage = page + 1;
-    const apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}&page=${nextPage}&pageSize=${pageSize}`;
+    const apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=f07f9ca22d534927920e0d81a75c3157&page=${nextPage}&pageSize=${pageSize}`;
     
     try {
-        let data = await fetch(apiUrl);
+        let data = await fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
         let parsedData = await data.json();
         if (parsedData.articles && parsedData.articles.length > 0) {
             setArticles(prevArticles => prevArticles.concat(parsedData.articles));
